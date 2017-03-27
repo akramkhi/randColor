@@ -1,5 +1,4 @@
-// randomColor by David Merfield under the CC0 license
-// https://github.com/davidmerfield/randomColor/
+
 
 ;(function(root, factory) {
 
@@ -472,6 +471,23 @@
     }
     return total
   }
+
+
+// extractRGB : fonction pour decomposer la chaine hexadecimale en 3 parties 
+  function extractRGB(hex){
+    var rgb = [];
+    hex = hex.substring(1);
+
+    rgb[0] = hex[0] + '' + hex[1];
+    rgb[1] = hex[2] + '' + hex[3];
+    rgb[2] = hex[4] + '' + hex[5];
+
+    return rgb.map(function(current){
+      return parseInt(current, 16);
+    });
+
+
+  // ajout de fonction compare color
   function compareColors(color1, color2){
     var rgb1 = [];
     var rgb2 = [];
@@ -492,17 +508,7 @@
 
   }
 
-  function extractRGB(hex){
-    var rgb = [];
-    hex = hex.substring(1);
 
-    rgb[0] = hex[0] + '' + hex[1];
-    rgb[1] = hex[2] + '' + hex[3];
-    rgb[2] = hex[4] + '' + hex[5];
-
-    return rgb.map(function(current){
-      return parseInt(current, 16);
-    });
 
   }
   return randomColor;
