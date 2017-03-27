@@ -87,34 +87,24 @@
         // generate the same color each time...
         if (seed && options.seed) options.seed += 1;
 
-
+        // generer un randomColor
         var ourColor = randomColor(options);
         console.log("first test option wantseed: "+options.seed);
 
-
+        // creer une variable pour que dire s'il ya de similarites
         var isThereSimilarities = false;
-
+        // tester si y'a de similarités
         for (var i = 0; i < colors.length; i++) {
           if(compareColors(ourColor,colors[i]) && colors.length > 1){
             isThereSimilarities = true;
           }
         }
+
         if(!isThereSimilarities){
 
-
-          if(options.wantseed=="1"){
-            //console.log("test vrai")
             colors.push(ourColor);
             //console.log(ourColor);
-          }else{
-            //console.log("test false ");
-            //console.log("wantseed :"+options.wantseed);
-            colors.push(ourColor);
-
           }
-        }
-
-
       }
 
       options.count = totalColors;
@@ -473,7 +463,7 @@
   }
 
 
-// extractRGB : fonction pour decomposer la chaine hexadecimale en 3 parties 
+// extractRGB : fonction pour decomposer la chaine hexadecimale en 3 parties
   function extractRGB(hex){
     var rgb = [];
     hex = hex.substring(1);
