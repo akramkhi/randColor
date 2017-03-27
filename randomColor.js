@@ -463,7 +463,7 @@
   }
 
 
-// extractRGB : fonction pour decomposer la chaine hexadecimale en 3 parties
+// extractRGB : fonction pour decomposer la chaine hexadecimale en 3 parties   
   function extractRGB(hex){
     var rgb = [];
     hex = hex.substring(1);
