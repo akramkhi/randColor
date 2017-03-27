@@ -474,7 +474,7 @@
 
 
 // extractRGB : fonction pour decomposer la chaine hexadecimale en 3 parties 
-  function extractRGB(hex){
+ function extractRGB(hex){
     var rgb = [];
     hex = hex.substring(1);
 
